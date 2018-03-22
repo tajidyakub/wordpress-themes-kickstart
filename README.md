@@ -24,4 +24,18 @@ $ npm run dev
 $ npm watch-poll
 ```
 
+## Menggunakan Kickstart
 
+Clone repositori
+
+```bash
+$ git clone https://git.codesandbox.pw/Tajid/wordpress-themes-kickstart.git folder-themes
+```
+
+Install dependency dan Kompilasi asset untuk pertama kali
+
+```bash
+$ cd folder-themes/
+$ npm i
+$ npm run dev
+```
