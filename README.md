@@ -3,6 +3,8 @@
 Kickstart untuk kerangka pengembangan WordPress themes dilengkapi dengan:
 
 - [ ] Twitter Bootstrap 4 
+- [ ] Editorconfig
+- [ ] PHP_Codesniffer
 - [ ] JQuery dan Popper.js sebagai peer dependency bootstrap
 - [ ] Laravel-mix, webpack wrapper sass dan js
 - [ ] Javascript bootstrap `scripts/app.js`
@@ -21,3 +23,5 @@ Theming bootstrap dilakukan via `styles/_variables.scss` yang diimport oleh `sty
 $ npm run dev
 $ npm watch-poll
 ```
+
+

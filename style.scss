@@ -1,0 +1,23 @@
+@import 'styles/meta';
+@import 'styles/variables';
+@import '~bootstrap/scss/bootstrap';
+@import 'styles/swatch';
+
+// Custom CSS Rules here.
+
+$color-text-alt: #eeeeee;
+$background-footer: #cccccc;
+
+.background-pattern {
+	background-image: url();
+	background-repeat: repeat;
+}
+
+footer {
+	background-color: $background-footer;
+}
+
+.footer-main {
+	font-size: 0.9rem;
+	color: $color-text-alt;
+}
