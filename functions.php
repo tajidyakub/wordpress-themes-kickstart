@@ -1,7 +1,7 @@
 <?php
 /**
  * @package kickstart
- * 
+ *
  * Theme's functions file.
  */
 
@@ -93,4 +93,47 @@ function kickstart_scripts() {
 	wp_enqueue_script( 'kickstart-app', get_template_directory_uri() . '/app.js', array(), '20180208', true );
 }
 add_action( 'wp_enqueue_scripts', 'kickstart_scripts' );
+
+/**
+ * Display Subtitle post meta based on Post ID.
+ *
+ * @return void
+ */
+function the_subtitle() {
+	global $post;
+	$post_id = $post->ID;
+	$key     = 'Subtitle';
+	$single  = true;
+	echo get_post_meta($post_id, $key, $single);
+}
+
+/**
+ * Display site custom logo defined through the customizer.
+ *
+ * @return void
+ */
+function logo_display() {
+	$logo_id = get_theme_mod( 'custom_logo' );
+	$logo    = wp_get_attachment_image_src( $logo_id , 'full' );
+
+	if ( has_custom_logo() ) {
+		$logodisplay = '<img src="'. esc_url( $logo[0] ) .'">';
+		echo $logodisplay;
+	} else {
+		$logodisplay =  '<h1>'. get_bloginfo( 'name' ) .'</h1>';
+		echo $logodisplay;
+	}
+}
+
+/**
+ * Add Shortcodes -> tobe moved
+ */
+function lead_shortcode($atts = [], $content = null)
+{
+  $return  = '<div class="lead-border bg-primary">&nbsp;</div>';
+  $return .= '<p class="lead">' . $content. '</p>';
+  $return .= '<div class="lead-border bg-primary">&nbsp;</div>';
+  return $return;
+}
+add_shortcode('lead', 'lead_shortcode');
 
