@@ -53,3 +53,11 @@ $ cd folder-themes/
 $ npm i
 $ npm run dev
 ```
+
+## TODO
+
+- [ ] Fontawesome yang sering digunakan, dikumpulkan dalam satu file html
+- [ ] Functions untuk melakukan modifikasi yang terkait dengan appearances
+- [ ] Shortcodes functions dipindah ke site plugins
+- [ ] HTML Widget untuk memudahkan modifikasi konten tanpa masuk ke dalam HTML
+- [ ] Bundling standard Custom Fields dan Custom Post Type ke dalam site plugins
